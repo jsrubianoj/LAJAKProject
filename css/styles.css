@@ -33,3 +33,30 @@
 .information-seller input:focus{
     outline: none;
 }
+
+.information-seller .submit{
+    width: auto;
+    padding: 10px;
+    background: #f17108;
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.information-seller::after{
+    content: '>';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    right: -23px;
+    padding: 10px;
+    text-align: center;
+    font-size: 9px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    transform: translate(-50%);
+    box-shadow: -1px 1px 3px 1px rgba(0,0,0,.2);
+    color: #7c7c7c;
+}
