@@ -1,0 +1,54 @@
+
+.login {
+    padding: 15px;
+    border: 2px solid;
+    color: white;
+    height: 10vh;
+    align-items: center;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 30%;
+    margin: auto;
+    padding: 40px;
+
+}
+.title{
+    text-align: center;
+}
+header{
+    padding-bottom: 50px;
+}
+.input{
+    grid-column: span 2;
+}
+.loginButtons {
+    color: white;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 2px solid ;
+    display: grid;
+    height: 10vh;
+
+}
+
+.centerbutton {
+    margin-left: 8px;
+    align-items: center;
+    display:center;
+    color: white;
+    background-color: rgb(16,137,254,255);
+    
+}
+
+.buttontext {
+    color: rgb(16,137,254,255);
+    background-color: white;
+    border-color: white;
+}
+
+.logo{
+    display:block;
+    margin:auto;
+}
+
