@@ -1,0 +1,13 @@
+.loginButtons {
+    color: white;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 2px solid ;
+    display: grid;
+    height: 10vh;
+
+}
+
+.title{
+    text-align: center;
+}
