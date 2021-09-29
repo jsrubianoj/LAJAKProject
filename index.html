@@ -14,7 +14,7 @@
         <a href="html/info_ventas.HTML">Información ventas</a>
         <a href="html/vendedores.html">Vendedores</a>
         <a href="html/usuarios.html">Usuarios y Roles</a>
-        <a href="html/maestreo.html">Maestro estado de ventas</a>
+        <a href="html/maestro.html">Maestro estado de ventas</a>
     </div>
 
 
@@ -25,10 +25,31 @@
 
     <!-- Crear la interfaz para la gestión de información de ventas (Sebastián)-->
 
-    
+
 
 
     <!-- Crear la interfaz gráfica para la gestión de información de los vendedores (Johanna)-->
+    <!-- Permite establecer los diferentes estados de la venta a lo largo del ciclo de vida de la línea de producción (creación, embalaje, despacho, ruta, ubicación, recepción).   -->
+
+    <h1>Modulo de información de vendedores</h1>
+
+    <form action="/action_page.php">
+        <label for="id_venta">ID Venta:</label>
+        <input name="id_venta"type="text" placeholder="ID de la venta">
+    <label for="estado">Estado de la venta:</label>
+    <select name="estado" id="estado">
+        <option value="creacion">Creación</option>
+        <option value="embalaje">Embalaje</option>
+        <option value="despacho">Despacho</option>
+        <option value="ruta">Ruta</option>
+        <option value="ubicacion">Ubicación</option>
+        <option value="recepcion">Recepción</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Enviar">
+    </form>
+
+<p>Click "Enviar" para actualizar estado de la venta.</p>
 
 
 
