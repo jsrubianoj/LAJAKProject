@@ -16,50 +16,63 @@
 
 <body>
     <!-- Crear la interfaz gráfica para la gestión de información de los vendedores -->
-    <h1>Gestión de información de vendedores</h1>
-    <p>Aquí los vendedores pueden registrar su información para poder vender sus productos</p>
+    <header>
+        <h1 class="title">INFORMACIÓN DE LOS VENDEDORES</h1>
+    </header>
 
-    <div class="container">
-        <div class="information-seller">
-            <h2>Información de los vendedores</h2>
-            <form action="">
-                <label>Código del vendedor</label>
-                <input type="int" placeholder="" class="codigo_vendedor">
+    <main>
+                    
+        <form class="GIV">
 
-                <label>Primer nombre</label>
-                <input type="text" placeholder="" class="primer_nombre">
+            <label>Código del vendedor:</label>
+            <input type="int"; placeholder="" class="input">
+                        
+            <label>Primer nombre:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <label>Segundo nombre</label>
-                <input type="text" placeholder="" class="segundo_nombre">
+            <label>Segundo nombre:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <label>Primer apellido</label>
-                <input type="text" placeholder="" class="primer_apellido">
+            <label>Primer apellido:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <label>Segundo apellido</label>
-                <input type="text" placeholder="" class="segundo_apellido">
+            <label>Segundo apellido:</label>
+            <input type="text"; placeholder="" class="input">
+                       
+            <label>Tipo de identificacion:</label>
+            <select name="Tipo de identificacion" class="input"> 
+                <option> </option>
+                <option>Cédula de ciudadania</option>
+                <option>Cédula de extrajera</option>
+                <option>Pasaporte</option>
+                <option>NIT</option>
+            </select>
 
-                <label>Tipo de identificacion</label>
-                <select name="Tipo de identificacion"> 
-                    <option>Cédula de ciudadania</option>
-                    <option>Cédula de extrajera</option>
-                    <option>Pasaporte</option>
-                    <option>NIT</option>
-                </select>
+            <label>Número de identificación:</label>
+            <input type="int"; placeholder="" class="input">
 
-                <label>Número de indentificación</label>
-                <input type="int" placeholder="" class="numero_identificacion">
+            <label>Correo electronico:</label>
+            <input type="text"; placeholder="" class="input">
+                  
+            <label>País:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <label>Correo electronico</label>
-                <input type="text" placeholder="" class="correo">
+            <label>Departamento/Estado:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <label>Domicilio</label>
-                <input type="text" placeholder="" class="domicilio">
+            <label>Ciudad:</label>
+            <input type="text"; placeholder="" class="input">
 
-                <input type="submit" class="submit" value="GUARDAR">
-            </form>
-        </div>
+            <label>Dirección:</label>
+            <input type="text"; placeholder="" class="input">                
 
-    </div>
+            <div>
+                <input type="submit"; class="submit" value="GUARDAR">
+            </div>
+            
+        </form>
+        
+    </main>
 
 
 

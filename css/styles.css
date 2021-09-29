@@ -1,23 +1,26 @@
-.container{
-    width: 100%;
-    height: 100vh;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+.GIV{
+    padding: 15px;
+    color: black;
+    height: 10vh;
     align-items: center;
-}
-
-.information-seller{
+    display : grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    width: 45%;
+    margin: auto;
     padding: 40px;
-    position: relative;
 }
 
-.information-seller h2{
+.title{
     color: #797979;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;  
+    text-align: center;  
+}
+header{
+    padding-bottom: 50px;
 }
 
-.information-seller input{
+.input{
     width: auto;
     padding: 5px;
     font-size: 16px;
@@ -27,20 +30,33 @@
     border-right-style: none;
     border-bottom: 1px solid #a8a8a8;
     color: #333;
+    grid-column: apan 2;
 }
 
-.information-seller input:active,
-.information-seller input:focus{
+.input:active,
+.input:focus{
     outline: none;
 }
 
-.information-seller .submit{
+.submit{
     width: auto;
     padding: 10px;
-    background: #f17108;
+    background-color: rgb(16,137,254,255);
     color: #fff;
     font-size: 12px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
     cursor: pointer;
+    margin-left: 8px;
+    align-items: center;
+    display: center;
+}
+
+.GIVButtons {
+    color: white;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 2px solid ;
+    display: grid;
+    height: 10vh;
 }
 
