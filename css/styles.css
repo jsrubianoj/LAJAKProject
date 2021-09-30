@@ -1,20 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .GIV{
-    padding: 15px;
+    padding: 40px;
     color: black;
-    height: 10vh;
+    height: auto;
     align-items: center;
     display : grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 20px;
-    width: 45%;
+    gap: 40px;
+    width: 55%;
     margin: auto;
-    padding: 40px;
+    box-shadow: 0 0 3px 0 rgba(16,137,254,255);
 }
 
 .title{
-    color: #797979;
+    color: white;
     margin-bottom: 30px;  
     text-align: center;  
+    background-color: rgb(16,137,254,255);
+    margin: auto;
+    width: 50%;
 }
 header{
     padding-bottom: 50px;
@@ -30,7 +38,7 @@ header{
     border-right-style: none;
     border-bottom: 1px solid #a8a8a8;
     color: #333;
-    grid-column: apan 2;
+    grid-column: apan 1;
 }
 
 .input:active,
@@ -39,24 +47,26 @@ header{
 }
 
 .submit{
-    width: auto;
+    width: 100%;
     padding: 10px;
     background-color: rgb(16,137,254,255);
     color: #fff;
     font-size: 12px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
     cursor: pointer;
-    margin-left: 8px;
     align-items: center;
     display: center;
+    text-align: center;
+    margin: auto;
+    align-content: center;
 }
 
-.GIVButtons {
-    color: white;
-    background-color: whitesmoke;
-    padding: 5px;
-    border: 2px solid ;
-    display: grid;
-    height: 10vh;
+.logo{
+    display: block;
+    margin:auto;
+    width: 10%;
+    padding: 10px;
 }
+
+
 
