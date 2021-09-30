@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content = "Katty Gómez Acevedo">
+    <title> Gestión de información de vendedores </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style type=”text/css>
+        h2{font-style: italic;}
+        p{color: black;}
+    </style>
+</head>
+
+<body>
+    <!-- Crear la interfaz gráfica para la gestión de información de los vendedores -->
+    <header>
+        <h1 class="title">INFORMACIÓN DE LOS VENDEDORES</h1>
+    </header>
+
+    <main>
+        <div >
+            <img src="./imagenes/lajak.png" alt="imagen" class="logo" >
+        </div>
+                    
+        <form class="GIV">
+
+            <label>Código del vendedor:</label>
+            <input type="int"; placeholder="" class="input">
+            
+            <div>
+                <label>Primer nombre:</label>
+                <input type="text"; placeholder="" class="input">
+            </div> 
+            <div>
+                <label>Segundo nombre:</label>
+                <input type="text"; placeholder="" class="input">
+            </div> 
+            <div>
+                <label>Primer apellido:</label>
+                <input type="text"; placeholder="" class="input">
+            </div> 
+            <div>
+                <label>Segundo apellido:</label>
+                <input type="text"; placeholder="" class="input">
+            </div>          
+
+            <div>
+                <label>Tipo de identificacion:</label>
+                <select name="Tipo de identificacion" class="input"> 
+                    <option> </option>
+                    <option>Cédula de ciudadania</option>
+                    <option>Cédula de extrajera</option>
+                    <option>Pasaporte</option>
+                    <option>NIT</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Número de identificación:</label>
+                <input type="int"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>Correo electronico:</label>
+                <input type="text"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>Número de celular:</label>
+                <input type="int"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>País:</label>
+                <input type="text"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>Departamento/Estado:</label>
+                <input type="text"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>Ciudad:</label>
+                <input type="text"; placeholder="" class="input">
+            </div>
+
+            <div>
+                <label>Dirección:</label>
+                <input type="text"; placeholder="" class="input">                
+            </div>
+
+            <div class="botton">
+                <input type="submit"; class="submit" value="GUARDAR">
+            </div>
+             
+            <div class="botton">
+                <input type="submit"; class="submit" value="CANCELAR">
+            </div>
+            
+        </form>
+        
+    </main>
+
+
+
+</body>
+</html>
