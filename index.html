@@ -9,6 +9,13 @@
 </head>
 <body>
     <!-- Header -->
+    <div class="barra">
+        <a class="active" href="Inicio.html">Login</a>
+        <a href="html/info_ventas.HTML">Información ventas</a>
+        <a href="html/vendedores.html">Vendedores</a>
+        <a href="html/usuarios.html">Usuarios y Roles</a>
+        <a href="html/maestro.html">Maestro estado de ventas</a>
+    </div>
 
 
 
@@ -16,21 +23,50 @@
 
 
 
-    <!-- Crear la interfaz para la gestión de información de ventas -->
-
-
-    <!-- Crear la interfaz gráfica para la gestión de información de los vendedores -->
+    <!-- Crear la interfaz para la gestión de información de ventas (Sebastián)-->
 
 
 
-    <!-- Crear la interfaz para la gestión de los usuarios y roles del sistema -->
+
+    <!-- Crear la interfaz gráfica para la gestión de información de los vendedores (Johanna)-->
+    <!-- Permite establecer los diferentes estados de la venta a lo largo del ciclo de vida de la línea de producción (creación, embalaje, despacho, ruta, ubicación, recepción).   -->
+
+    <h1>Modulo de información de vendedores</h1>
+
+    <form action="/action_page.php">
+        <label for="id_venta">ID Venta:</label>
+        <input name="id_venta"type="text" placeholder="ID de la venta">
+    <label for="estado">Estado de la venta:</label>
+    <select name="estado" id="estado">
+        <option value="creacion">Creación</option>
+        <option value="embalaje">Embalaje</option>
+        <option value="despacho">Despacho</option>
+        <option value="ruta">Ruta</option>
+        <option value="ubicacion">Ubicación</option>
+        <option value="recepcion">Recepción</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Enviar">
+    </form>
+
+<p>Click "Enviar" para actualizar estado de la venta.</p>
 
 
-    <!-- Crear la interfaz para el maestro de estados de ventas(venta, proceso, cancelado) -->
+
+    <!-- Crear la interfaz para la gestión de los usuarios y roles del sistema (Laura Alejandra)-->
+
+
+    <!-- Crear la interfaz para el maestro de estados de ventas(venta, proceso, cancelado) (Javier) -->
 
 
     
 
     <!-- Footer -->
+
+    <footer id="page-footer" class="page-footer">
+        <p>Autor: LAJAK Group<br>
+        <a href="https://github.com/jsrubianoj/LAJAKProject">Repositorio Github</a>-<p>2021</p>
+        </p>
+    </footer>
 </body>
 </html>
