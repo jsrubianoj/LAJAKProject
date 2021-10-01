@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import InfoVentas from './components/infoVenta/InfoVentas';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DetalleVenta from './components/detalleVenta/DetalleVenta';
+import CrearVenta from './components/crearVenta/CrearVenta';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CrearVenta />
   </React.StrictMode>,
   document.getElementById('root')
 );
