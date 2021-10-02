@@ -1,33 +1,124 @@
-#titulo {
-    text-align: center;
+.login {
+    padding: 15px;
+    border: 2px solid;
+    color: white;
+    height: 10vh;
+    align-items: center;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 30%;
+    margin: auto;
+    padding: 40px;
 
 }
-
-.texto {
-    color: black;
-}
-
-body {
+.title{
     text-align: center;
-    font-family: sans-serif;
+}
+header{
+    padding-bottom: 50px;
+}
+.input{
+    grid-column: span 2;
+}
+.loginButtons {
+    color: white;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 2px solid ;
+    display: grid;
+    height: 10vh;
+
 }
 
 .centerbutton {
+    margin-left: 8px;
+    align-items: center;
     display:center;
     color: white;
     background-color: rgb(16,137,254,255);
-}
-
-main {
-
-    border-style: outset;
-    border-color: rgba(255, 255, 255, 0.103);
-    border-radius: 5px;
-    border-width: 5px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: 10px;
-    margin-bottom: 100px;
     
 }
 
+.buttontext {
+    color: rgb(16,137,254,255);
+    background-color: white;
+    border-color: white;
+}
+
+.logo{
+    display:block;
+    margin:auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.GIV{
+    padding: 40px;
+    color: black;
+    height: auto;
+    align-items: center;
+    display : grid;
+    gap: 40px;
+    width: 55%;
+    margin: auto;
+    box-shadow: 0 0 3px 0 rgba(16,137,254,255);
+    border-radius: 4px;
+}
+
+.title{
+    color: white;
+    margin-bottom: 30px;  
+    text-align: center;  
+    background-color: rgb(16,137,254,255);
+    margin: auto;
+    width: 55%;
+    border-radius: 4px;
+}
+header{
+    padding-bottom: 50px;
+}
+
+.input{
+    width: auto;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+    grid-column: apan 1;
+    border-radius: 4px;
+}
+
+.input:active,
+.input:focus{
+    outline: none;
+}
+
+.submit{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(16,137,254,255);
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    align-items: center;
+    display: center;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+}
+
+.logo{
+    display: block;
+    margin:auto;
+    width: 10%;
+    padding: 10px;
+}

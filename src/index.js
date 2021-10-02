@@ -10,17 +10,13 @@ import InfoVendedores from './components/infoVendedores/infoVendedores';
 import EstadoVenta from './components/estadoVenta/EstadoVenta';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-<<<<<<< HEAD
 import GestionU from './components/gestionU/GestionU';
-
-=======
 import Login from './components/Login/Login';
->>>>>>> ccb5bc51a707c82964e8cb53408ef35e14e39bb4
 ReactDOM.render(
   <React.StrictMode>
    <Header/>
-   <Login/>
    <InfoVendedores />
+   <Login/>
    <GestionU/>
    <EstadoVenta/>
    <Footer/>
