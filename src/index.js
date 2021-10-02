@@ -8,11 +8,15 @@ import DetalleVenta from './components/detalleVenta/DetalleVenta';
 import CrearVenta from './components/crearVenta/CrearVenta';
 import InfoVendedores from './components/infoVendedores/infoVendedores';
 import EstadoVenta from './components/estadoVenta/EstadoVenta';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 ReactDOM.render(
   <React.StrictMode>
+   <Header/>
    <InfoVendedores />
    <EstadoVenta/>
+   <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );
