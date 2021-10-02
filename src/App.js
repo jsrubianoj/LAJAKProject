@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Login from './components/Login/Login';
+import InfoVentas from './components/infoVenta/InfoVentas';
+import CrearVenta from './components/crearVenta/CrearVenta';
+import InfoVendedores from './components/infoVendedores/infoVendedores';
+import EstadoVenta from './components/estadoVenta/EstadoVenta';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import GestionU from './components/gestionU/GestionU';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Login}></Route>
+          <Route exact path='/infoventas' component={InfoVentas}></Route>
+          <Route exact path='/nuevaventa' component={CrearVenta}></Route>
+          <Route exact path='/estadoventa' component={EstadoVenta}></Route>
+          <Route exact path='/infovendedores' component={InfoVendedores}></Route>
+          <Route exact path='/gestionusuarios' component={GestionU}></Route>
+        </Switch>
+      </Router>
+      <Footer />
     </div>
   );
 }

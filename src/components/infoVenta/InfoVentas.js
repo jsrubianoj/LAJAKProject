@@ -1,20 +1,11 @@
 import React from 'react';
 import './InfoVentas.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { ventas } from '../../data/ventas';
-import { useState } from 'react';
 
 const InfoVentas = () => {
-
-    const [keyword, setKeyword] = useState('')
-
-    const writeText = (keyword) => {
-        keyword.preventDefault()
-        setKeyword(keyword.target.value)
-        console.log(keyword.target.value)
-    }
-
     return (
         <div className="container">
             <h1 className="my-5"> Registro de ventas </h1>
@@ -55,7 +46,7 @@ const InfoVentas = () => {
                 </tbody>
             </table>
         </div>
-    )
+    );
 
 }
 
