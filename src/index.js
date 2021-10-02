@@ -10,11 +10,13 @@ import InfoVendedores from './components/infoVendedores/infoVendedores';
 import EstadoVenta from './components/estadoVenta/EstadoVenta';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import GestionU from './components/gestionU/GestionU';
 
 ReactDOM.render(
   <React.StrictMode>
    <Header/>
    <InfoVendedores />
+   <GestionU/>
    <EstadoVenta/>
    <Footer/>
   </React.StrictMode>,
