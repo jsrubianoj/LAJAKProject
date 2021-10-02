@@ -4,13 +4,15 @@ import './header.css'
 const header = () => {
     return (
         <div>
-            <div className="header">
-                <a href="/" className="logo">LAJAK</a>
-                <div className="header-right">
-                    <a className="active" href="#home">Home</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
-                </div>
+            <div class="header">
+            <a href="#default" class="logo">LAJAK</a>
+            <div class="header-right">
+                <a class="active" href="#home">Inicio</a>
+                <a href="#contact">Información vendedores</a>
+                <a href="#about">Información ventas</a>
+                <a href="#about">Maestro estado de ventas</a>
+                <a href="#about">Estado de ventas</a>
+            </div>
             </div>
         </div>
     )
