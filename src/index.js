@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetalleVenta from './components/detalleVenta/DetalleVenta';
 import CrearVenta from './components/crearVenta/CrearVenta';
-import InfoVendedores from './components/infoVendedores/InfoVendedores';
+import InfoVendedores from './components/infoVendedores/infoVendedores';
+import EstadoVenta from './components/estadoVenta/EstadoVenta';
 
 ReactDOM.render(
   <React.StrictMode>
-    <InfoVendedores />
+   <InfoVendedores />
+   <EstadoVenta/>
   </React.StrictMode>,
   document.getElementById('root')
 );
