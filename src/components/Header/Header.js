@@ -5,13 +5,14 @@ const header = () => {
     return (
         <div>
             <div class="header">
-            <a href="#default" class="logo">LAJAK</a>
-            <div class="header-right">
-                <a class="active" href="#home">Inicio</a>
-                <a href="#contact">Información vendedores</a>
-                <a href="#about">Información ventas</a>
-                <a href="#about">Maestro estado de ventas</a>
-                <a href="#about">Estado de ventas</a>
+            <a href="/" className="logo">LAJAK</a>
+            <div className="header-right">
+                <a className="active" href="/">Inicio</a>
+                <a href="/infoventas">Información ventas</a>
+                <a href="/nuevaventa">Nueva venta</a>
+                <a href="/estadoventa">Estado de ventas</a>
+                <a href="/infovendedores">Información vendedores</a>
+                <a href="/gestionusuarios">Gestión de usuarios</a>
             </div>
             </div>
         </div>

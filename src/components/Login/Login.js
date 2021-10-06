@@ -1,5 +1,7 @@
 import React from 'react'
 import './login.css';
+import logo from './logo.png';
+
 const Login = () => {
     return (
         <div>
@@ -8,7 +10,7 @@ const Login = () => {
 
             <main>
                 <div >
-                    <img src="./img/lajak.png" alt="imagen" className="logo" />
+                    <img src={logo} alt="imagen" className="logo" />
                 </div>
                 <form className="login">
                     <input type="text" placeholder="Ingrese su nombre" className='input' />
