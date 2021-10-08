@@ -12,26 +12,6 @@ const InfoVendedores = () => {
             
             <form className="GIV">
 
-                <label>Código del vendedor:</label>
-                <input type="int" placeholder="" className="input"/>
-
-                <div>
-                    <label>Primer nombre:</label>
-                    <input type="text" placeholder="" className="input"/>
-                </div>
-                <div>
-                    <label>Segundo nombre:</label>
-                    <input type="text" placeholder="" className="input"/>
-                </div>
-                <div>
-                    <label>Primer apellido:</label>
-                    <input type="text" placeholder="" className="input"/>
-                </div>
-                <div>
-                    <label>Segundo apellido:</label>
-                    <input type="text" placeholder="" className="input"/>
-                </div>
-                
                 <div>
                     <label>Tipo de identificacion:</label>
                     <select name="Tipo de identificacion" className="input">
@@ -42,12 +22,23 @@ const InfoVendedores = () => {
                         <option>NIT</option>
                     </select>
                 </div>
+            
+                <div>
+                   <label>Número de identificación:</label>
+                   <input type="int" placeholder="" className="input"/>
+                </div>
+                
 
                 <div>
-                    <label>Número de identificación:</label>
-                    <input type="int" placeholder="" className="input"/>
+                    <label>Nombres:</label>
+                    <input type="text" placeholder="" className="input"/>
                 </div>
-
+                
+                <div>
+                    <label>Apellidos:</label>
+                    <input type="text" placeholder="" className="input"/>
+                </div>
+                                
                 <div>
                     <label>Correo electronico:</label>
                     <input type="text" placeholder="" className="input"/>
