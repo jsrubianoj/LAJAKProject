@@ -1,9 +1,14 @@
 const {Model,DataTypes} =require('sequelize');
 const sequelize = require('../db');
 
+
+//declaración de clase
 class Product extends Model {}
 Product.init({
-    name: DataTypes.STRING,
+    name: {
+        type:DataTypes.STRING,
+        allowNull:false
+    },
     valor: DataTypes.DOUBLE,
     peso: DataTypes.FLOAT,
     stock: DataTypes.INTEGER,

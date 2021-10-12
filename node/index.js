@@ -5,8 +5,13 @@ const Product = require('./database/models/Product')
 
 const hostname = '127.0.0.1';
 const port = 5000;
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
+
+
+//Middleware
+app.use(express.urlencoded({extended:true}))//cambiar formato
+app.use(express.json())//convertir a json
+
+app.use('/api', require('./routes/productos'))
 
 app.post('/productos', (req, res) =>{
   Product.create(
