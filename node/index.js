@@ -1,21 +1,30 @@
 const express = require('express');
 const app = express();
 const sequelize=require('./database/db');
-
+const Product = require('./database/models/Product')
 
 const hostname = '127.0.0.1';
-const port = 3306;
+const port = 5000;
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
-app.get('/productos', (req, res) =>{
-  res.send([{'nombre':"computador"},{'nombre':"teclado"}])
+app.post('/productos', (req, res) =>{
+  Product.create(
+      req.body
+      ).then(product=>{
+      res.json(product);
+    })
 })
 
 app.listen(port,()=>{
-  sequelize.sync({force:true}).then(()=>{
-    console.log("Conexión a base de datos exitosa");
-  }).catch((error)=>{
-    console.log("Se ha producido un error")
-  })
-  console.log(`API corriendo en http://${hostname}:${port}/`)
-});
 
+  try {
+      console.log(`la api esta corriendo por el puerto ${port}`);
+      sequelize.sync({ force: false }).then(() => {
+          console.log('nos hemos conectado a la base de datos');
+      });
+  } catch (error) {
+      console.log('se ha producido un error', error);
+  }
+
+})

@@ -1,8 +1,8 @@
 module.exports={
     database:{
         username:"root",
-        password:"LAJAK",
-        database:"lajakstore",
+        password:"",
+        database:"misiontic",
         host: "localhost"
     }
 }
