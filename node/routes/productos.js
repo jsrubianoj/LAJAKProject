@@ -3,8 +3,8 @@ const router=express.Router();
 const Product=require('../database/models/Product')
 
 
-//create 
-router.post('/producto', (req,res)=>{
+//create (post se usa para crear o 'postear')
+router.post('/', (req,res)=>{
     console.log('req', req.body)
     Product.create(
         req.body
@@ -14,7 +14,7 @@ router.post('/producto', (req,res)=>{
 })
 
 
-//index /api/productos
+//index /api/productos (GET para leer)
 router.get('/',(req,res)=>{
     Product.findAll().then(productos=>{
         res.json(productos);
