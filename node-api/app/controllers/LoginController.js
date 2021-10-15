@@ -1,20 +1,21 @@
-const User = require('../models/User')
+const { comparePassword } = require('../helpers/bcryptHelper')
+const UserModel = require('../models/User')
 
 const LoginController = async (req, res) => {
 
     const { email, password } = req.body
 
-    const DB_User = await User.findOne({
+    const DB_User = await UserModel.findOne({
         where:  { email }
     })
     
-    const check = await compareEncrypt(password, DB_User.password)
-    const token = await createToken(DB_User)
+    const check = await comparePassword(password, DB_User.password)
+    //const token = await createToken(DB_User)
 
     if(check){
         res.send({
             data: DB_User,
-            token
+            //token
         })
     } else {
         res.send({

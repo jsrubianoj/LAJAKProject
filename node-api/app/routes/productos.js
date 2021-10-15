@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/products', (req, res) => {
+router.get('/', (req, res) => {
     res.send({
         message: 'Products'
     })

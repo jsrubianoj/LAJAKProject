@@ -14,8 +14,8 @@ const CrearVenta = () => {
                         <input type="number" class="form-control" id="inputIDCliente" placeholder="Identificacion Cliente" />
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputPassword4">Fecha</label>
-                        <input type="date" class="form-control" id="inputFecha" />
+                        <label>Nombre Cliente</label>
+                        <input type="number" class="form-control" id="inputIDCliente" placeholder="Nombre Cliente" />
                     </div>
                 </div>
                 <div className="row my-3">
