@@ -1,0 +1,34 @@
+{
+  "name": "lajakproject",
+  "version": "1.0.0",
+  "description": "Proyecto de desarrollo web desarrollado por los estudiantes Alejandra Cardenas, Myriam Lizeth Niño Joya, Katty Gomez Acevedo, Javier Andrés Román Osorio y Juan Sebastian Rubiano Jara, durante el Ciclo 3 de [Misión TIC 2022](https://www.misiontic2022.gov.co/portal/) (Capacitación de programadores de la Universidad de Antioquia)",
+  "main": "index_laura.js",
+  "scripts": {
+    "start": "node node_laura/index_laura.js",
+    "dev": "nodemon node_laura/index_laura.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsrubianoj/LAJAKProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsrubianoj/LAJAKProject/issues"
+  },
+  "homepage": "https://github.com/jsrubianoj/LAJAKProject#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cli": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.13",
+    "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}
