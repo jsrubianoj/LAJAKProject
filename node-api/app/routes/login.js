@@ -6,8 +6,4 @@ const { LoginController } = require('../controllers/LoginController')
 
 router.post('/', LoginController)
 
-router.get('/', (req, res)=> {
-    res.send({msg: 'login'})
-})
-
 module.exports = router 

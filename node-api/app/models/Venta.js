@@ -6,10 +6,9 @@ class Venta extends Model {}
 Venta.init({
     id_cliente: DataTypes.STRING,
     nombre_cliente: DataTypes.STRING,
-    valor: DataTypes.BIGINT,
-    id_vendedor: DataTypes.STRING,
-    nombre_vendedor: DataTypes.STRING,
-    fecha: DataTypes.DATE
+    codigo_producto: DataTypes.STRING,
+    nombre_producto: DataTypes.STRING,
+    valor: DataTypes.BIGINT
 }, {
     sequelize,
     modelName: 'Venta'
