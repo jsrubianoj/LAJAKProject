@@ -6,7 +6,10 @@ class Producto extends Model {}
 Producto.init({
     nombre: DataTypes.STRING,
     precio: DataTypes.DOUBLE,
-    codigo: DataTypes.BIGINT,
+    codigo: {
+        unique: true,
+        type: DataTypes.BIGINT
+    },
     cantidad: DataTypes.INTEGER
 }, {
     sequelize,

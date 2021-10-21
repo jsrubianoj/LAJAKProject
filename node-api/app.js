@@ -16,7 +16,7 @@ app.listen(port, () => {
     console.log('Servidor iniciado en el puerto: ', port)
 })
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     console.log('Conectado a la base de datos');
 }).catch((error) => {
     console.log('Error al conectarse a la base de datos', error);

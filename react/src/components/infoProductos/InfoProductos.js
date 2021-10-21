@@ -1,20 +1,39 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import './InfoProductos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
-import { productos } from '../../data/productos';
 
 const InfoProductos = () => {
+
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+
+        const getProductos = () => {
+            fetch('http://localhost:3001/api/productos/')
+                .then(response => response.json())
+                .then(response => {
+                    console.log(response)
+                    setProductos(response)
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+        getProductos()
+
+    }, [])
+
     return (
         <div className="container">
             <h1 className="my-5"> Registro de productos </h1>
 
             <div className="d-flex">
-                <a href="/nuevaVenta" className="bg-color btn-add py-2 px-3">
+                <Link to="/nuevaVenta" className="bg-color btn-add py-2 px-3">
                     Agregar Producto <FontAwesomeIcon icon={faPlus} className="mx-1" />
-                </a>
-
+                </Link>
             </div>
             <table className="table text-center border my-4">
                 <thead className="bg-color">
@@ -28,21 +47,26 @@ const InfoProductos = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {productos.map(producto => {
-                        return (
-                            <tr>
-                                <th> {producto.id} </th>
-                                <td> {producto.codigoBarras} </td>
-                                <td> {producto.nombreProducto} </td>
-                                <td> {producto.referenciaInterna} </td>
-                                <td> ${producto.precioUnitario} </td>
-                                <td>
-                                    <a href="/" className="mx-2 text-primary"> <FontAwesomeIcon icon={faEdit} /> </a>
-                                    <a href="/" className="mx-2 text-danger"> <FontAwesomeIcon icon={faTrash} /> </a>
-                                </td>
-                            </tr>
-                        )
-                    })}
+                    {(productos !== undefined && productos.length > 0) ?
+                        productos.map(producto => {
+                            return (
+                                <tr key={producto.id}>
+                                    <th> {producto.id} </th>
+                                    <td> {producto.codigo} </td>
+                                    <td> {producto.nombre} </td>
+                                    <td> {producto.precio} </td>
+                                    <td> ${producto.precio} </td>
+                                    <td>
+                                        <button className="btn btn-primary mx-2"> <FontAwesomeIcon icon={faEdit} /> </button>
+                                        <button className="btn btn-danger mx-2"> <FontAwesomeIcon icon={faTrash} /> </button>
+                                    </td>
+                                </tr>
+                            )
+                        }) :
+                        <div>
+                            Ningun producto coincide con la busqueda
+                        </div>
+                    }
                 </tbody>
             </table>
         </div>

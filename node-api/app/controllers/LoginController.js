@@ -1,4 +1,5 @@
 const { comparePassword } = require('../helpers/bcryptHelper')
+const { createToken } = require('../helpers/jwtHelper')
 const UserModel = require('../models/User')
 
 const LoginController = async (req, res) => {
@@ -8,14 +9,21 @@ const LoginController = async (req, res) => {
     const DB_User = await UserModel.findOne({
         where:  { email }
     })
-    
-    const check = await comparePassword(password, DB_User.password)
-    //const token = await createToken(DB_User)
+
+    const check = await comparePassword(password, DB_User.password)    
 
     if(check){
+
+        const User2 = await UserModel.findOne({
+            where:  { email },
+            attributes: ['nombre', 'email', 'role']
+        })
+
+        const token = await createToken(User2)
+
         res.send({
-            data: DB_User,
-            //token
+            DB_User,
+            token
         })
     } else {
         res.send({

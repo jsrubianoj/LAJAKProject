@@ -11,8 +11,7 @@ User.init({
     },
     password: DataTypes.STRING,
     role: {
-        type: DataTypes.STRING,
-        defaultValue: 'VENDEDOR'
+        type: DataTypes.STRING
     }
 }, {
     sequelize,

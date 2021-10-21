@@ -4,9 +4,7 @@ const getVentas = async (req, res) => {
 
     const ventas = await Ventas.findAll({})
 
-    res.send({
-        data: ventas
-    })
+    res.send(ventas)
 
 }
 
@@ -14,10 +12,10 @@ const AddVenta = async (req, res) => {
 
     try {
 
-        const { id_cliente, nombre_cliente, codigo_product, nombre_producto, valor } = req.body
+        const { id_cliente, nombre_cliente, codigo_producto, nombre_producto, valor } = req.body
 
         const venta = await Ventas.create({
-            id_cliente, nombre_cliente, codigo_product, nombre_producto, valor
+            id_cliente, nombre_cliente, codigo_producto, nombre_producto, valor
         })
 
         res.send({
@@ -33,16 +31,16 @@ const AddVenta = async (req, res) => {
 }
 
 const UpdateVenta = async (req, res) => {
-    
+
     try {
 
         const idventa = req.params.id
         const { id_cliente, nombre_cliente, codigo_product, nombre_producto, valor } = req.body
 
         const venta = await Ventas.update({
-              id_cliente, nombre_cliente, codigo_product, nombre_producto, valor
+            id_cliente, nombre_cliente, codigo_product, nombre_producto, valor
         }, {
-            where: { id: idventa}
+            where: { id: idventa }
         })
 
         res.send({
@@ -54,28 +52,30 @@ const UpdateVenta = async (req, res) => {
         console.log("Ha ocurrido un error", error);
 
     }
-    
+
 }
 
 const DeleteVenta = async (req, res) => {
 
-    const id = req.params.id
-    
-    const venta = await Ventas.destroy({
-        where: id
-    })
 
-    if(venta != null){
+    try {
+
+        const id = req.params.id
+
+        const venta = await Ventas.destroy({
+            where: { id }
+        })
+
         res.send({
             message: "Se ha eliminado el registro",
             venta
         })
-    } else {
+
+    } catch (error) {
         res.send({
             message: "No se ha encontrado el registro"
         })
     }
-    
 
 }
 

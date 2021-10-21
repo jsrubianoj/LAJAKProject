@@ -36,13 +36,13 @@ const UpdateVendedor = async (req, res) => {
     
     try {
 
-        const identificacion = req.params.id
+        const id = req.params.id
         const { nombres, apellidos, email, telefono, tipoIdentificacion, identificacion, pais, departamento_estado, ciudad, direccion } = req.body
 
         const vendedor = await Vendedor.update({
             nombres, apellidos, email, telefono, tipoIdentificacion, identificacion, pais, departamento_estado, ciudad, direccion
         }, {
-            where: { id: identificacion}
+            where: { id }
         })
 
         res.send({
