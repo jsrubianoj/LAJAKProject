@@ -17,7 +17,7 @@ const InfoVentas = () => {
             mode: 'cors'
         }
 
-        fetch(`http://localhost:3001/api/ventas/eliminar/${id}/`, requestInit)
+        fetch(`https://api-lajak.herokuapp.com/api/ventas/eliminar/${id}/`, requestInit)
             .then(res => res.json())
             .then(res => console.log("Eliminado con Exito", res))
             .catch(error => {
@@ -31,7 +31,7 @@ const InfoVentas = () => {
     useEffect(() => {
 
         const getVentas = () => {
-            fetch('http://localhost:3001/api/ventas/')
+            fetch('https://api-lajak.herokuapp.com/api/ventas/')
                 .then(response => response.json())
                 .then(response => {
                     console.log(response)

@@ -26,7 +26,7 @@ const Login = () => {
             body: JSON.stringify(user)
         }
 
-        fetch('http://localhost:3001/api/login/', requestInit)
+        fetch('https://api-lajak.herokuapp.com/api/login/', requestInit)
         .then(res => res.json())
         .then(data =>
             localStorage.setItem('tokenventas', data.token)    

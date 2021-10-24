@@ -27,7 +27,7 @@ const CrearVenta = () => {
             body: JSON.stringify(venta)
         }
 
-        fetch('http://localhost:3001/api/ventas/nuevaVenta', requestInit)
+        fetch('https://api-lajak.herokuapp.com/api/ventas/nuevaVenta', requestInit)
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(error => {
