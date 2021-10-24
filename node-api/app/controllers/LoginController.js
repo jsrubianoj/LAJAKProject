@@ -25,6 +25,7 @@ const LoginController = async (req, res) => {
             DB_User,
             token
         })
+        
     } else {
         res.send({
             msg: "El usuario o la contraseña son incorrectos"

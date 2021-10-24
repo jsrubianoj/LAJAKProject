@@ -10,9 +10,7 @@ User.init({
         type: DataTypes.STRING
     },
     password: DataTypes.STRING,
-    role: {
-        type: DataTypes.STRING
-    }
+    role: DataTypes.STRING
 }, {
     sequelize,
     modelName: 'User'

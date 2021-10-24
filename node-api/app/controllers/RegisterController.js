@@ -3,7 +3,7 @@ const UserModel = require('../models/User')
 
 const RegisterUser = async (req, res) => {
 
-    const { nombre, email, password } = req.body
+    const { nombre, email, password, role } = req.body
 
     const check = await UserModel.findOne({
         where: { email }
@@ -15,7 +15,8 @@ const RegisterUser = async (req, res) => {
         const user = await UserModel.create({
             nombre,
             email,
-            password: hashPass
+            password: hashPass,
+            role
         })
 
         res.send({

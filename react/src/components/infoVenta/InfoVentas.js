@@ -8,6 +8,7 @@ import { faPlus, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 const InfoVentas = () => {
 
     const [ventas, setVentas] = useState([])
+    const [listUpdate, setListUpdate] = useState(false)
 
     const eliminarVenta = (id) => {
 
@@ -17,11 +18,13 @@ const InfoVentas = () => {
         }
 
         fetch(`http://localhost:3001/api/ventas/eliminar/${id}/`, requestInit)
-        .then(res => res.json())
-        .then(res => console.log("Eliminado con Exito", res))
-        .catch(error => {
-            console.log('Error al eliminar la venta', error)
-        })
+            .then(res => res.json())
+            .then(res => console.log("Eliminado con Exito", res))
+            .catch(error => {
+                console.log('Error al eliminar la venta', error)
+            })
+
+        setListUpdate(true)
 
     }
 
@@ -39,54 +42,59 @@ const InfoVentas = () => {
                 });
         }
         getVentas()
+        setListUpdate(false)
 
-    }, [])
+    }, [listUpdate])
 
     return (
         <div className="container">
-            <h1 className="my-5"> Registro de ventas </h1>
 
-            <div className="d-flex">
-                <Link to="/nuevaVenta" className="bg-color btn-add py-2 px-3">
-                    Agregar Venta <FontAwesomeIcon icon={faPlus} className="mx-1" />
-                </Link>
-            </div>
-            <table className="table text-center border my-4">
-                <thead className="bg-color">
-                    <tr>
-                        <th className="col-1">#</th>
-                        <th className="col-1">ID Cliente</th>
-                        <th className="col-2">Nombre Cliente</th>
-                        <th className="col-2">Codigo Producto</th>
-                        <th className="col-2">Nombre Producto</th>
-                        <th className="col-2">Valor Venta</th>
-                        <th className="col-2">Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {(ventas !== undefined && ventas.length > 0) ?
-                        ventas.map(venta => {
-                            return (
-                                <tr key={venta.id}>
-                                    <th> {venta.id} </th>
-                                    <td> {venta.id_cliente} </td>
-                                    <td> {venta.nombre_cliente} </td>
-                                    <td> {venta.codigo_producto} </td>
-                                    <td> {venta.nombre_producto} </td>
-                                    <td> ${venta.valor} </td>
-                                    <td>
-                                        <button className="btn btn-primary mx-2"> <FontAwesomeIcon icon={faEdit} /> </button>
-                                        <button onClick={() => eliminarVenta(venta.id)} className="btn btn-danger mx-2"> <FontAwesomeIcon icon={faTrash} /> </button>
-                                    </td>
-                                </tr>
-                            )
-                        }) :
-                        <div>
-                            No hay ninguna venta registrada
-                        </div>
-                    }
-                </tbody>
-            </table>
+            {(!localStorage.getItem('tokenventas')) ? <h1> No estas autenticado </h1> : <div>
+                <h1 className="my-5"> Registro de ventas </h1>
+
+                <div className="d-flex">
+                    <Link to="/nuevaVenta" className="bg-color btn-add py-2 px-3">
+                        Agregar Venta <FontAwesomeIcon icon={faPlus} className="mx-1" />
+                    </Link>
+                </div>
+                <table className="table text-center border my-4">
+                    <thead className="bg-color">
+                        <tr>
+                            <th className="col-1">#</th>
+                            <th className="col-1">ID Cliente</th>
+                            <th className="col-2">Nombre Cliente</th>
+                            <th className="col-2">Codigo Producto</th>
+                            <th className="col-2">Nombre Producto</th>
+                            <th className="col-2">Valor Venta</th>
+                            <th className="col-2">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody setListUpdate={setListUpdate}>
+                        {(ventas !== undefined && ventas.length > 0) ?
+                            ventas.map(venta => {
+                                return (
+                                    <tr key={venta.id}>
+                                        <th> {venta.id} </th>
+                                        <td> {venta.id_cliente} </td>
+                                        <td> {venta.nombre_cliente} </td>
+                                        <td> {venta.codigo_producto} </td>
+                                        <td> {venta.nombre_producto} </td>
+                                        <td> ${venta.valor} </td>
+                                        <td>
+                                            <button className="btn btn-primary mx-2"> <FontAwesomeIcon icon={faEdit} /> </button>
+                                            <button onClick={() => eliminarVenta(venta.id)} className="btn btn-danger mx-2"> <FontAwesomeIcon icon={faTrash} /> </button>
+                                        </td>
+                                    </tr>
+                                )
+                            }) :
+                            <div>
+                                No hay ninguna venta registrada
+                            </div>
+                        }
+                    </tbody>
+                </table>
+            </div>}
+
         </div>
     );
 
